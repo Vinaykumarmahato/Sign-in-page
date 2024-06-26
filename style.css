@@ -62,7 +62,7 @@ h3 {
 
 .input-group input[type="email"],
 .input-group input[type="password"] {
-    width: 100%;
+    width: calc(100% - 30px); /* Adjusted width calculation for padding and borders */
     padding: 0.75rem;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -70,7 +70,25 @@ h3 {
     color: #333;
     outline: none;
     transition: background 0.3s, box-shadow 0.3s;
+    box-sizing: border-box; /* Ensures padding and border are included in the width calculation */
 }
+
+/* Ensure input fields have a minimum width to prevent squeezing on smaller screens */
+@media (max-width: 480px) {
+    .input-group input[type="email"],
+    .input-group input[type="password"] {
+        width: calc(100% - 20px); /* Adjusted width calculation for smaller screens */
+    }
+}
+
+/* Additional media queries for finer adjustments based on specific screen sizes */
+@media (max-width: 320px) {
+    .input-group input[type="email"],
+    .input-group input[type="password"] {
+        width: calc(100% - 15px); /* Further adjusted width for very small screens */
+    }
+}
+
 
 .input-group input[type="email"]:focus,
 .input-group input[type="password"]:focus {
