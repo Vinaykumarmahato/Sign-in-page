@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="sign-up.css">
+</head>
+<body>
+    <div class="container" id="sign-up-container">
+        <h3>Join Us</h3>
+        <h2>Sign Up</h2>
+        <form id="sign-up-form">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter email address" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm password" required>
+            </div>
+            <button type="submit" class="continue-btn">Sign Up</button>
+        </form>
+        <p class="signin-text">Already have an account? <a href="index.html" class="signin-link">Sign in</a></p>
+    </div>
+
+    <div class="container" id="thank-you-container" style="display: none;">
+        <h2>Thank You!</h2>
+        <p>Your sign-up was successful.</p>
+    </div>
+
+    <script>
+        document.getElementById('sign-up-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('sign-up-container').style.display = 'none';
+            document.getElementById('thank-you-container').style.display = 'block';
+            setTimeout(function() {
+                window.location.href = 'https://inoglle.vercel.app/'; // Change to your target page
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

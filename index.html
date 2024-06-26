@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="sign-in-container">
         <h3>Welcome</h3>
         <h2>Sign in</h2>
-        <form>
+        <form id="sign-in-form">
             <div class="input-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Enter email address" required>
@@ -36,7 +36,24 @@
             
             <button type="button" class="otp-btn">Log in with OTP</button>
         </form>
-        <p class="signup-text">Don't have an account? <a href="#" class="signup-link">Sign up</a></p>
+        <p class="signup-text">Don't have an account? <a href="Sign-Up-page.html" class="signup-link">Sign up</a></p>
     </div>
+
+    <div class="container" id="thank-you-container" style="display: none;">
+        <h2>Thank You!</h2>
+        <p>Your sign-in was successful.</p>
+    </div>
+    
+
+    <script>
+        document.getElementById('sign-in-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('sign-in-container').style.display = 'none';
+            document.getElementById('thank-you-container').style.display = 'block';
+            setTimeout(function() {
+                window.location.href = 'https://inoglle.vercel.app/'; // Change to your target page
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
