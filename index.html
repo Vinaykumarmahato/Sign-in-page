@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h3>Welcome</h3>
+        <h2>Sign in</h2>
+        <form>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter email address" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+            </div>
+            <div class="input-group">
+                <input type="checkbox" id="remember-me" name="remember-me">
+                <label for="remember-me">Remember me</label>
+            </div>
+            <div class="input-group">
+                <a href="#" class="forgot-password">Forgot password?</a>
+            </div>
+            <button type="submit" class="continue-btn">Continue</button>
+            
+            <div class="or-container">
+                <div class="line"></div>
+                <div class="or">OR</div>
+                <div class="line"></div>
+            </div>
+            
+            <button type="button" class="otp-btn">Log in with OTP</button>
+        </form>
+        <p class="signup-text">Don't have an account? <a href="#" class="signup-link">Sign up</a></p>
+    </div>
+</body>
+</html>
